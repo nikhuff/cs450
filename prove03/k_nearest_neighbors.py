@@ -28,7 +28,10 @@ class Model:
             knn = sorted(distances, key=lambda x: x[0])[0:int(self._k)]
             knn_class = np.copy(knn)[:, 1]
             try:
-                predictions.append(statistics.mode(knn_class))
+                if isinstance(knn_class, int):
+                    predictions.append(statistics.mode(knn_class))
+                else:
+                    predictions.append(statistics.mean(knn_class))
             except statistics.StatisticsError:
                 predictions.append(knn_class[0])
 

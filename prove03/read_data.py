@@ -36,11 +36,26 @@ def read_car_data():
     return data_container(data, target)
 
 def read_indian_data():
-    headers = ["times_pregnant", "glucose", "blood_pressure", "skin_thickness", "insulin", "bmi", "family_history", "age", "class"]
+    headers = [0,1,2,3,4,5,6,7,8]
 
-    data = pd.read_csv("data/indians.data", header=None, names=headers, index_col=False)
-    data[[1,2,3,4,5]] = data[[1,2,3,4,5]].replace(0, numpy.NaN)
-    print(indian_data)
+    dataset = pd.read_csv("data/indians.data", header=None, names=headers, index_col=False)
+    dataset[[1, 2, 3, 4, 5]] = dataset[[1, 2, 3, 4, 5]].replace(0, np.NaN)
+    dataset.dropna(inplace=True)
+
+    data = dataset.values
+    target = data[:, 8]
+    data = np.delete(data, 8, 1)
+
+    return data_container(data, target)
 
 def read_mpg_data():
-    pass
+    headers = [0, 1, 2, 3, 4, 5, 6, 7]
+
+    dataset = pd.read_csv("data/auto-mpg.data", header=None, names=headers, dtype={3: np.float},
+                          index_col=False, usecols=range(8), delim_whitespace=True, na_values='?')
+
+    data = dataset.values
+    target = data[:, 0]
+    data = np.delete(data, 0, 1)
+
+    return data_container(data, target)
