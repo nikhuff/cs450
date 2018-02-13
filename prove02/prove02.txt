@@ -2,29 +2,31 @@ When your assignment is complete, please answer the questions in this text file 
 
 1. Please provide the URL of your public GitHub repository.
 
+https://github.com/nikhuff/cs450/tree/master
 
 2. Briefly describe your overall approach to the task and highlight the most difficult part of this assignment.
 
+I used a nested loop to iterate through each element of the training data for each element of the test data. I then got the distance between each element, found the k nearest and returned an array of the predictions. In order to keep the classes with the distance, I attached the class to each distance and made a 2d array.
 
 3. Briefly describe your process for handling numeric data on different scales (i.e., normalizing).
 
+I plan to implement this next week using a scalar approach.
 
 4. Describe your results for the Iris data set. (For example, what level of accuracy did you see for different values of K?
 
+When k = 3, I had about 97% accuracy, but as k increased that accuracy decreased. When k = 10 it was about 95% and when k = 100 it was 35%.
 
 5. How did your implementation compare to existing implementations?
 
+The results were almost identical however the existing implementation is quite a bit faster than my own.
 
 6. Describe anything you did to go above and beyond the minimum standard requirements.
 
+I did not go above and beyond the requirements.
 
 7. Please select the category you feel best describes your assignment:
-A - Some attempt was made
-B - Developing, but significantly deficient
-C - Slightly deficient, but still mostly adequate
 D - Meets requirements
-E - Shows creativity and excels above and beyond requirements
 
 
 8. Provide a brief justification (1-2 sentences) for selecting that category.
-
+I met the requirements but did not have time to do anything above and beyond.

@@ -4,7 +4,7 @@ Name: Nicholas Huff
 
 1. Please provide the URL of your public GitHub repository.
 
-https://github.com/nikhuff/cs450
+https://github.com/nikhuff/cs450/tree/master/prove01
 
 For questions 2-6, please type "True" or "False" in front of the question number.
 
@@ -20,12 +20,12 @@ True 6. I have run the HardCoded classifier on the Iris dataset and obtained a r
 
 7. What accuracy do you get when running the HardCoded classifier on the Iris dataset and why do you think that is?
 
-It ranged between 28%-35%. This is because it randomizes the set so it's likely that a third of the target test will consist of type 0 but it's possible that there are slightly more or slightly less than a third. 
+It ranged between 28%-35%. This is because it randomizes the set so it's likely that a third of the target test will consist of type 0 but it's possible that there are slightly more or slightly less than a third.
 
 8. Please select the category you feel best describes your assignment:
 
-4 - Meets requirements
+5 - Shows creativity and excels above and beyond requirements
 
 9. Provide a brief justification (1-2 sentences) for selecting that category:
 
-I accomplished all of the requirement but did not have time to go above and beyond.
+I was able to finish all of the requirements while adding in a few different features. I added a user interface, and the ability to choose a different file from which to get data. 
